@@ -1,6 +1,25 @@
-:root{
-    
+:root {
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+    --darkGrayishRed: hsl(0, 6%, 24%)
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.logo {
+    position: absolute;
+    left: 13%;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -10,10 +29,6 @@
     color: hsl(228, 45%, 44%);
 }
 
-* {
-    padding: 0;
-    margin: 0;
-}
 
 .container {
     width: 60%;
@@ -23,23 +38,86 @@
 
 .items {
     display: flex;
-
-}
-
-.items .item {}
-
-.items .item .right-item {
-    text-align: right;
-}
-
-.items .item .right-item img {
     height: 100vh;
+    overflow: hidden;
+
 }
+
+
+
+
 
 .items .item .left-item {
     display: flex;
-    margin-top: 100px;
+    margin-top: 30px;
+    padding-top: 130px;
 
+
+}
+
+.items .item .left-item h1 {
+    text-transform: uppercase;
+    color: var(--darkGrayishRed);
+    margin-bottom: 20px;
+    font-size: 60px;
+    letter-spacing: 10px;
+
+}
+
+.items .item .left-item h1 span {
+    letter-spacing: 10px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.items .item .left-item .content>p {
+    color: var(--desaturatedRed);
+    line-height: 1.5;
+}
+
+.items .item .left-item .input {
+    margin-top: 10px;
+}
+
+.items .item .left-item .input .form-group {
+    position: relative;
+}
+
+.items .item .left-item .input .form-group input {
+    border-radius: 100px;
+    border: 1px solid var(--desaturatedRed);
+    opacity: 0.5;
+    padding: 15px 20px;
+    width: 80%;
+    outline: none !important;
+    margin-bottom: 10px;
+}
+
+.items .item .left-item .input .form-group button {
+    outline: none !important;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    border-radius: 100px;
+    color: white;
+    position: absolute;
+    right: 70px;
+    top: 0;
+    z-index: 55;
+    cursor: pointer;
+
+}
+
+.items .item .left-item .input .form-group button:hover {
+    background: hsl(0, 80%, 86%);
+
+}
+
+.items .item .left-item .input .form-group .err-icon {
+    position: absolute;
+    right: 35%;
+    top: 10px;
 }
 
 .items .item:first-child {
@@ -48,6 +126,136 @@
 
 }
 
+.items .item .right-item {
+    text-align: right;
+    overflow: hidden;
+}
+
+.items .item .right-item img {
+    width: 100%;
+}
+
 .h-100 {
     height: 100%;
+}
+
+.p-5 {
+    padding: 50px 0;
+}
+
+.text-desRed {
+    color: var(--desaturatedRed);
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .items {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .items .item .right-item {
+        height: 75vh;
+        padding-top: 60px;
+
+    }
+
+    .items .item .left-item {
+        padding: 10px 0 !important;
+        text-align: center;
+
+    }
+
+    .items .item .left-item .input .form-group button {
+        right: 10px;
+    }
+
+    .logo {
+        top: 0 !important;
+        left: 20px;
+        padding: 10px 0;
+
+    }
+}
+
+.error-msg {
+    color: var(--desaturatedRed);
+}
+
+.d-none {
+    display: none;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .items {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .items .item .right-item {
+        height: 75vh;
+        padding-top: 60px;
+
+    }
+
+    .items .item .left-item {
+        padding: 10px 0 !important;
+        text-align: center;
+
+    }
+
+    .items .item .left-item .input .form-group button {
+        right: 10px;
+    }
+
+    .logo {
+        top: 0 !important;
+        left: 20px;
+        padding: 10px 0;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .items {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .items .item .right-item {
+        height: 75vh;
+        padding-top: 60px;
+
+    }
+
+    .items .item .left-item {
+        padding: 10px 0 !important;
+        text-align: center;
+
+    }
+
+    .items .item .left-item .input .form-group button {
+        right: 30px;
+    }
+
+    .logo {
+        top: 0 !important;
+        left: 20px;
+        padding: 10px 0;
+
+    }
 }

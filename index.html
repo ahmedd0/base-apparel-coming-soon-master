@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
@@ -16,16 +18,19 @@
 <body>
 
 
+  <div class="logo p-5">
+    <a href="index.html"><img src="images/logo.svg" alt="this is logo"></a>
 
+  </div>
   <div class="items">
-    <div class="item">
-      <div class="container h-100">
-        <a href=""><img src="images/logo.svg" alt=""></a>
+    <div class="item h-100">
+      <div class="container">
+
 
         <div class="left-item h-100">
           <div class="content">
             <h1>
-              <span>We're</span>
+              <span class="text-desRed">We're</span>
               <br>coming <br>
               soon
 
@@ -35,25 +40,35 @@
               Add your email below to stay up-to-date with announcements and our launch deals.
 
             </p>
+            <div class="input">
+              <div class="form-group">
+                <input id="emailInput" type="text" placeholder="test@gmail.com">
+                <button><i class="fas fa-chevron-right"></i></button>
+                <i class="err-icon d-none" id="errorIcon"><img src="images/icon-error.svg" alt=""></i>
+
+              </div>
+              <p id="errorMessage" class="error-msg d-none">error message</p>
+            </div>
           </div>
 
         </div>
       </div>
 
     </div>
-    <div class="item">
+    <div class="item h-100">
       <div class="right-item">
-        <img src="images/hero-desktop.jpg" alt="">
+        <img src="images/hero-desktop.jpg" alt="girl photo section">
       </div>
     </div>
   </div>
 
-  <footer>
+  <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
-  </footer>
+  </footer> -->
+  <script src="js/index.js"></script>
 </body>
 
 </html>
